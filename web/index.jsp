@@ -11,7 +11,6 @@
     <title></title>
   </head>
   <body>
-  <h2>Hello World!</h2>
-  ${user.userName}
+  <h2>HeaderMaster</h2>
   </body>
 </html>
