@@ -4,6 +4,7 @@ import com.joker.hm.service.IUserService;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -23,6 +24,9 @@ public class TestMyBatis {
     @Resource
     private IUserService userService = null;
 
+    ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext(
+            new String[] { "classpath:spring-mybatis.xml", "classpath:spring-mvc.xml" });
+
 //	@Before
 //	public void before() {
 //		ac = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -31,7 +35,7 @@ public class TestMyBatis {
 
     @Test
     public void test1() {
-        User user = userService.getUserById(1);
+        User user = userService.getUserById("0");
         // System.out.println(user.getUserName());
         // logger.info("Öµ£º"+user.getUserName());
         logger.info(JSON.toJSONString(user));

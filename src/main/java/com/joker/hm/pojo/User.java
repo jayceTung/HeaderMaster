@@ -1,28 +1,18 @@
 package com.joker.hm.pojo;
 
 public class User {
-    private Integer id;
-
-    private String userName;
+    private String userid;
 
     private String password;
 
-    private Integer age;
+    private String nickname;
 
-    public Integer getId() {
-        return id;
+    public String getUserid() {
+        return userid;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setUserid(String userid) {
+        this.userid = userid == null ? null : userid.trim();
     }
 
     public String getPassword() {
@@ -33,11 +23,11 @@ public class User {
         this.password = password == null ? null : password.trim();
     }
 
-    public Integer getAge() {
-        return age;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setNickname(String nickname) {
+        this.nickname = nickname == null ? null : nickname.trim();
     }
 }
