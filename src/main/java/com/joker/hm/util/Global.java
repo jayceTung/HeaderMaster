@@ -6,8 +6,8 @@ package com.joker.hm.util;
 public class Global {
 
     public static class Key {
-        public static final String userStr = "user";
-        public static final String statue = "statue";
+        public static final String USER = "user";
+        public static final String STATUE = "statue";
     }
 
 

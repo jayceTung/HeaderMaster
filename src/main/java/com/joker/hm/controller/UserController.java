@@ -1,18 +1,16 @@
 package com.joker.hm.controller;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import com.alibaba.fastjson.JSON;
 import com.joker.hm.pojo.User;
 import com.joker.hm.service.IUserService;
 import com.joker.hm.util.Global;
-import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -34,8 +32,8 @@ public class UserController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		model.addAttribute(Global.Key.userStr, user);
-		model.addAttribute(Global.Key.statue, response.getStatus());
+		model.addAttribute(Global.Key.USER, user);
+		model.addAttribute(Global.Key.STATUE, response.getStatus());
 		out.print(JSON.toJSONString(model));
 	}
 }
