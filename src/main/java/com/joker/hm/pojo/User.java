@@ -1,18 +1,18 @@
 package com.joker.hm.pojo;
 
 public class User {
-    private String userid;
+    private String userId;
 
     private String password;
 
     private String nickname;
 
     public String getUserid() {
-        return userid;
+        return userId;
     }
 
     public void setUserid(String userid) {
-        this.userid = userid == null ? null : userid.trim();
+        this.userId = userid == null ? null : userid.trim();
     }
 
     public String getPassword() {
