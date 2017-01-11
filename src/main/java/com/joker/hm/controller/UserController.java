@@ -17,23 +17,23 @@ import java.io.PrintWriter;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-	@Resource
-	private IUserService userService;
-	
-	@RequestMapping("/showUser")
-	public void toIndex(HttpServletRequest request, Model model, HttpServletResponse response){
-		String userId = request.getParameter("id");
-		User user = this.userService.getUserById(userId);
+    @Resource
+    private IUserService userService;
+
+    @RequestMapping("/showUser")
+    public void toIndex(HttpServletRequest request, Model model, HttpServletResponse response) {
+        String userId = request.getParameter("id");
+        User user = this.userService.getUserById(userId);
 //		model.addAttribute("user", user);
 //		return "showUser";
-		PrintWriter out = null;
-		try {
-			out = response.getWriter();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		model.addAttribute(Global.Key.USER, user);
-		model.addAttribute(Global.Key.STATUE, response.getStatus());
-		out.print(JSON.toJSONString(model));
-	}
+        PrintWriter out = null;
+        try {
+            out = response.getWriter();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        model.addAttribute(Global.Key.USER, user);
+        model.addAttribute(Global.Key.STATUE, response.getStatus());
+        out.print(JSON.toJSONString(model));
+    }
 }

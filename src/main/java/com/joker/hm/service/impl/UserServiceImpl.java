@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 
 @Service("userService")
 public class UserServiceImpl implements IUserService {
-	@Resource
-	private UserMapper userDao;
+    @Resource
+    private UserMapper userDao;
 
-	public User getUserById(String userId) {
-		return userDao.selectByPrimaryKey(userId);
-	}
+    public User getUserById(String userId) {
+        return userDao.selectByPrimaryKey(userId);
+    }
 }
